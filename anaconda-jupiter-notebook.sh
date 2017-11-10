@@ -1,16 +1,24 @@
 #!/bin/bash
 
-SCRIPT_DIR=$(cd `dirname $0` && pwd)
-cd $SCRIPT_DIR
-
 SCRIPT=`basename $0`
 
-if [ "$#" -lt 1 ]; then
-    echo "usage: $SCRIPT <notebook_dir>"
-    exit 0
+if [[ "$#" -eq 1 ]] && [[ "$1" == "--help" || "$1" == "-h" || "$1" == "help" ]]; then
+    echo "Usage $SCRIPT [<working dir>]";
+    echo -e "\tunless otherwise specified, current working dir will be used by default"
+    exit 0;
+
 fi
 
-NOTEBOOK_LOCAL_DIR=$1
+if [ "$#" -lt 1 ]; then
+    NOTEBOOK_LOCAL_DIR=`pwd`
+else
+    if [ -d "$1" ];
+    then
+        NOTEBOOK_LOCAL_DIR=$1
+    else
+        NOTEBOOK_LOCAL_DIR=`pwd`
+    fi
+fi
 
 docker run -i -t \
        -p 8888:8888 \
