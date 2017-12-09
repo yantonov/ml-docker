@@ -1,9 +1,9 @@
 #!/bin/bash
 
-SCRIPT=`basename $0`
+SCRIPT="$(basename "$0")"
 
 if [[ "$#" -eq 1 ]] && [[ "$1" == "--help" || "$1" == "-h" || "$1" == "help" ]]; then
-    echo "Usage $SCRIPT [<working dir>]";
+    echo "Usage: ${SCRIPT} [<working dir>]";
     echo -e "\tunless otherwise specified, current working dir will be used by default"
     exit 0;
 
