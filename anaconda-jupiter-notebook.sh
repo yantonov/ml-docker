@@ -24,11 +24,10 @@ docker run -i -t \
        -p 8888:8888 \
        -v $NOTEBOOK_LOCAL_DIR:/opt/notebooks \
        --rm \
-       continuumio/anaconda3 \
+       my/anaconda \
        /bin/bash -c \
        "useradd dev --create-home \
-       && su - dev -c \"/opt/conda/bin/conda install jupyter -y --quiet \
-       && /opt/conda/bin/jupyter notebook \
+       && su - dev -c \"/opt/conda/bin/jupyter notebook \
        --notebook-dir=/opt/notebooks \
        --ip='*' \
        --port=8888 \
