@@ -1,6 +1,13 @@
 these scripts help to use anaconda throught docker images
 
-Usage:
+Usage:  
+
+Build image:  
+```bash
+build.sh
+```
+
+Use anaconda with jupiter notebooks:  
 ```bash
 anaconda-jupiter-notebook.sh [<working_directory>]
 ```
