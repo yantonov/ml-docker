@@ -2,11 +2,16 @@
 
 SCRIPT="$(basename "$0")"
 
-if [[ "$#" -eq 1 ]] && [[ "$1" == "--help" || "$1" == "-h" || "$1" == "help" ]]; then
-    echo "Usage: ${SCRIPT} [<working dir>]";
-    echo -e "\tunless otherwise specified, current working dir will be used by default"
-    exit 0;
-
+if [ "$#" -eq 1 ]; then
+     if [ "$1" == "--help" || "$1" == "-h" || "$1" == "help" ]; then
+         echo "Usage: ${SCRIPT} [<working dir>]";
+         echo -e "\tunless otherwise specified, current working dir will be used by default"
+         exit 0;
+     else
+         echo "unknown parameter";
+         echo "Help: ${SCRIPT} [--help | -h | help ]";
+         exit 1;
+     fi
 fi
 
 if [ "$#" -lt 1 ]; then
