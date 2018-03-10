@@ -4,4 +4,5 @@ MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
 RUN /opt/conda/bin/conda update conda -y && \
     /opt/conda/bin/conda install jupyter -y && \
+    /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/conda install -c mq pybrain
