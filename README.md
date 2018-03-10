@@ -1,4 +1,10 @@
-These scripts help to use anaconda throught docker images.
+These scripts help to use python machine learning libraries through docker images.
+
+Docker file provides:
+1. anaconda
+2. jupiter
+3. gensim
+4. pybrain
 
 Usage:  
 
