@@ -11,21 +11,19 @@ Usage:
 
 Add 'python3', 'python2' directories of this repository to PATH variable.
 
-Python3:
+For python 3:
 ```bash
 jupiter-notebook.sh [<working_directory>]
 ```
-Python2:
+For python 2:
 ```bash
 jupiter-notebook-python2.sh [<working_directory>]
 ```
-Unless otherwise specified, current working directory will be used.
-
 After that you can connect to notebook at localhost:8888, given working directory will be mounted also.
 
-Based on
-[Anaconda docker files](https://github.com/ContinuumIO/docker-images)
+Unless otherwise specified, current working directory will be used.
 
-Links to docker [hub](https://hub.docker.com)
-1. [jupiter-python3 image](https://hub.docker.com/r/yantonov/jupiter-python3/)
-2. [jupiter-python2 image](https://hub.docker.com/r/yantonov/jupiter-python2/)
+Links:
+1. [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
+2. [jupiter-python3 at docker hub](https://hub.docker.com/r/yantonov/jupiter-python3/)
+3. [jupiter-python2 at docker hub](https://hub.docker.com/r/yantonov/jupiter-python2/)
