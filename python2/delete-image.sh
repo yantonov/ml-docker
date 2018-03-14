@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker image rm my/jupiter-python2
+docker image rm yantonov/jupiter-python2

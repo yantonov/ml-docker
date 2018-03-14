@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-docker build -t my/jupiter-python3 .
+docker build -t yantonov/jupiter-python3 .

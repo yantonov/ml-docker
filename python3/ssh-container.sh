@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run --rm -t -i my/jupiter-python3
+docker run --rm -t -i yantonov/jupiter-python3
