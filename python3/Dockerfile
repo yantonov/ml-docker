@@ -6,3 +6,32 @@ RUN /opt/conda/bin/conda update conda -y && \
     /opt/conda/bin/conda install jupyter -y && \
     /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/pip install https://github.com/pybrain/pybrain/archive/0.3.3.zip
+
+RUN apt-get --yes update && \
+    apt-get --yes install git make build-essential libboost-all-dev
+
+RUN cd /opt && \
+    wget https://cmake.org/files/v3.10/cmake-3.10.2-Linux-x86_64.sh
+
+RUN cd /opt && \
+    chmod +x cmake-3.10.2-Linux-x86_64.sh && \
+    echo 'y' | ./cmake-3.10.2-Linux-x86_64.sh
+
+ENV PATH="/opt/cmake-3.10.2-Linux-x86_64/bin:${PATH}"
+
+RUN /opt/conda/bin/conda install protobuf tqdm wheel -y
+
+RUN cd /opt && \
+    git clone --branch=stable https://github.com/bigartm/bigartm.git && \
+    cd bigartm && \
+    mkdir build && cd build && \
+    cmake .. && \
+    make
+
+RUN cd /opt/bigartm/build && \
+    make install
+
+ENV ARTM_SHARED_LIBRARY=/usr/local/lib/libartm.so
+
+RUN cd /opt/bigartm/build && \
+    /opt/conda/bin/pip install python/bigartm*.whl
