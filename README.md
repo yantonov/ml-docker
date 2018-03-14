@@ -9,20 +9,23 @@ Docker file provides:
 
 Usage:  
 
-Build image:  
-```bash
-build.sh
-```
+Add 'python3', 'python2' directories of this repository to PATH variable.
 
-Use anaconda, other libraries with jupiter notebooks:  
+Python3:
 ```bash
 jupiter-notebook.sh [<working_directory>]
+```
+Python2:
+```bash
+jupiter-notebook-python2.sh [<working_directory>]
 ```
 Unless otherwise specified, current working directory will be used.
 
 After that you can connect to notebook at localhost:8888, given working directory will be mounted also.
 
-For easy of use it, you can add 'python3', 'python2' directories of this repository to PATH variable.
-
 Based on
 [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
+
+Links to docker [hub](https://hub.docker.com)
+1. [jupiter-python3 image](https://hub.docker.com/r/yantonov/jupiter-python3/)
+2. [jupiter-python2 image](https://hub.docker.com/r/yantonov/jupiter-python2/)
