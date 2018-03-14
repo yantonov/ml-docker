@@ -24,4 +24,5 @@ After that you can connect to notebook at localhost:8888, given working director
 
 For easy of use it, you can add 'python3', 'python2' directories of this repository to PATH variable.
 
+Based on
 [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
