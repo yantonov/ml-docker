@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-docker build -t my/anaconda-python2 .
+docker build -t my/jupiter-python2 .

@@ -29,7 +29,7 @@ docker run -i -t \
        -p 8888:8888 \
        -v $NOTEBOOK_LOCAL_DIR:/opt/notebooks \
        --rm \
-       my/anaconda \
+       my/jupiter-python3 \
        /bin/bash -c \
        "useradd dev --create-home \
        && su - dev -c \"/opt/conda/bin/jupyter notebook \
