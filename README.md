@@ -13,14 +13,14 @@ Build image:
 build.sh
 ```
 
-Use anaconda with jupiter notebooks:  
+Use anaconda, other libraries with jupiter notebooks:  
 ```bash
-anaconda-jupiter-notebook.sh [<working_directory>]
+jupiter-notebook.sh [<working_directory>]
 ```
 Unless otherwise specified, current working directory will be used.
 
 After that you can connect to notebook at localhost:8888, given working directory will be mounted also.
 
-For easy of use it, you can add 'anaconda', 'anaconda-python2' directories of this repository to PATH variable.
+For easy of use it, you can add 'python3', 'python2' directories of this repository to PATH variable.
 
 [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
