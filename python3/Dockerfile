@@ -7,9 +7,13 @@ RUN /opt/conda/bin/conda update conda -y && \
     /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/pip install https://github.com/pybrain/pybrain/archive/0.3.3.zip
 
+# bigartm installation
 RUN apt-get --yes update && \
     apt-get --yes install git make build-essential libboost-all-dev
 
+# bigartm needs cmake at least 3.1
+# base image uses debian 8, so the latest version of cmake is 3.0.2
+# that why latest version of cmake must be installed manually
 RUN cd /opt && \
     wget https://cmake.org/files/v3.10/cmake-3.10.2-Linux-x86_64.sh
 
