@@ -7,10 +7,6 @@ if [ "$#" -eq 1 ]; then
          echo "Usage: ${SCRIPT} [<working dir>]";
          echo -e "\tunless otherwise specified, current working dir will be used by default"
          exit 0;
-     else
-         echo "unknown parameter";
-         echo "Help: ${SCRIPT} [--help | -h | help ]";
-         exit 1;
      fi
 fi
 
