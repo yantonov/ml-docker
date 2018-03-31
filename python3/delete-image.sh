@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker image rm yantonov/jupiter-python3
+cd "$(dirname "$0")"
+
+../bin/delete-image.sh "yantonov/jupiter-python3"

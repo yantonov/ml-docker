@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker run --rm -t -i yantonov/jupiter-python3
+cd "$(dirname "$0")"
+
+../bin/ssh-container.sh "yantonov/jupiter-python3"

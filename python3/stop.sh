@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker stop $(docker ps -a --filter 'ancestor=yantonov/jupiter-python3' --format '{{.ID}}')
+cd "$(dirname "$0")"
+
+../bin/stop.sh "yantonov/jupiter-python3"
