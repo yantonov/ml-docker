@@ -2,17 +2,15 @@ FROM continuumio/anaconda
 
 MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
-RUN /opt/conda/bin/conda update conda -y && \
+RUN /opt/conda/bin/pip install --upgrade pip && \
+    /opt/conda/bin/conda update conda -y && \
     /opt/conda/bin/conda install jupyter -y && \
     /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/conda install -c mq pybrain
 
-RUN apt-get --yes update
-
-RUN /opt/conda/bin/pip install --upgrade pip
-
 # bigartm installation
-RUN apt-get --yes install git make build-essential libboost-all-dev
+RUN apt-get --yes update && \
+    apt-get --yes install git make build-essential libboost-all-dev
 
 # bigartm needs cmake at least 3.1
 # base image uses debian 8, so the latest version of cmake is 3.0.2
