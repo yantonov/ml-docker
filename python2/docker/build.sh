@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-../bin/build.sh "yantonov/jupiter-python2"
+../../bin/build.sh "yantonov/jupiter-python2"
