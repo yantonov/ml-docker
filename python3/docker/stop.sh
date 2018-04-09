@@ -2,4 +2,4 @@
 
 cd "$(dirname "$0")"
 
-../../bin/stop.sh "yantonov/jupiter-python3"
+make stop
