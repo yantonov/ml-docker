@@ -18,12 +18,11 @@ notebook:
 			--rm \
 			"$(IMAGE)" \
 			/bin/bash -c \
-			"useradd dev --create-home \
-			&& su - dev -c \"/opt/conda/bin/jupyter notebook \
+			"/opt/conda/bin/jupyter notebook \
 			--notebook-dir=/opt/notebooks \
 			--ip='*' \
 			--port=8888 \
-			--no-browser\""
+			--no-browser"
 
 ssh:
 	docker run --rm -t -i "$(IMAGE)" bash

@@ -42,3 +42,11 @@ ENV ARTM_SHARED_LIBRARY=/usr/local/lib/libartm.so
 
 RUN cd /opt/bigartm/build && \
     /opt/conda/bin/pip install python/bigartm*.whl
+
+ENV CUSER someuser
+
+RUN useradd -m -s /bin/bash -N $CUSER && \
+    mkdir -p /opt/notebooks && \
+    chown $CUSER /opt/notebooks
+
+USER $CUSER
