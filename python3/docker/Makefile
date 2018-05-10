@@ -27,11 +27,11 @@ notebook:
 ssh:
 	docker run --rm -t -i "$(IMAGE)" bash
 
-uninstall:
-	docker image rm "$(IMAGE)"
-
 stop:
 	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
 
 pull:
 	docker pull "$(IMAGE)"
+
+uninstall:
+	docker image rm "$(IMAGE)"
