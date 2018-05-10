@@ -32,3 +32,6 @@ uninstall:
 
 stop:
 	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
+
+pull:
+	docker pull "$(IMAGE)"
