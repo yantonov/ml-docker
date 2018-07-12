@@ -4,7 +4,7 @@ help:
 DOCKER_FILE=Dockerfile
 SRC?=$(shell pwd)
 
-IMAGE=yantonov/jupiter-python3
+IMAGE=yantonov/ml-docker
 
 build:
 	docker build \
