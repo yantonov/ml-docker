@@ -4,7 +4,7 @@ help:
 DOCKER_FILE=Dockerfile
 SRC?=$(shell pwd)
 
-IMAGE=yantonov/ml-docker
+IMAGE=yantonov/ml
 
 build:
 	docker build \
