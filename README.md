@@ -23,5 +23,5 @@ After that you can connect to notebook at localhost:8888, current working direct
 
 Links:
 1. [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
-2. [ml-docker at docker hub](https://hub.docker.com/r/yantonov/ml-docker/)
-3. [ml-docker-python2 at docker hub](https://hub.docker.com/r/yantonov/ml-docker-python2/)
+2. [ml image at docker hub](https://hub.docker.com/r/yantonov/ml/)
+3. [ml-python2 image at docker hub](https://hub.docker.com/r/yantonov/ml-python2/)
