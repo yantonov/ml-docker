@@ -4,6 +4,9 @@ MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
 RUN /opt/conda/bin/pip install --upgrade pip && \
     /opt/conda/bin/conda update conda -y && \
+    # line below is needed to install catboost
+    /opt/conda/bin/conda config --add channels conda-forge && \
+    /opt/conda/bin/conda install catboost -y && \
     /opt/conda/bin/conda install jupyter -y && \
     /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/conda install -c mq pybrain

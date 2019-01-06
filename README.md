@@ -2,10 +2,11 @@ These scripts help to use python machine learning libraries through docker image
 
 Docker file provides:
 1. [anaconda](https://anaconda.org/anaconda/python)
-2. [gensim](https://radimrehurek.com/gensim/)
-3. [bigartm](https://github.com/bigartm/bigartm)
-4. [jupiter](http://jupyter.org/)
-5. [pybrain](https://github.com/pybrain/pybrain)
+2. [catboost](https://github.com/catboost/catboost)
+3. [gensim](https://radimrehurek.com/gensim/)
+4. [bigartm](https://github.com/bigartm/bigartm)
+5. [jupiter](http://jupyter.org/)
+6. [pybrain](https://github.com/pybrain/pybrain)
 
 Usage:  
 
