@@ -26,6 +26,21 @@ notebook:
 			--port=8888 \
 			--no-browser"
 
+lab:
+	docker run \
+			--hostname localhost \
+			-i -t \
+			-p 8888:8888 \
+			-v "$(SRC):/opt/notebooks" \
+			--rm \
+			"$(IMAGE)" \
+			/bin/bash -c \
+			"/opt/conda/bin/jupyter lab \
+			--notebook-dir=/opt/notebooks \
+			--ip=0.0.0.0 \
+			--port=8888 \
+			--no-browser"
+
 ssh:
 	docker run --rm -u 0 -t -i "$(IMAGE)" bash
 
