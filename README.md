@@ -15,20 +15,20 @@ Add 'python3', 'python2' directories of this repository to PATH variable.
 
 Run jupiter notebook using python 3:
 ```bash
-jupiter-notebook.sh
+jupiter.sh notebook
 ```
 Run jupiter notebook using python 2:
 ```bash
-jupiter-notebook-python2.sh
+jupiter-python2.sh notebook
 ```
 
 Run jupiter lab using python 3:
 ```bash
-jupiter-lab.sh
+jupiter.sh
 ```
 Run jupiter lab using python 2:
 ```bash
-jupiter-lab-python2.sh
+jupiter-python2.sh
 ```
 
 After that you can connect to notebook at localhost:8888, current working directory will be mounted also.
