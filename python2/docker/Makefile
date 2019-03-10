@@ -42,7 +42,7 @@ lab:
 			--no-browser"
 
 ssh:
-	docker run --rm -u 0 -t -i "$(IMAGE)" bash
+	docker run --rm -u 0 -t -i -v "$(SRC):/opt/notebooks" "$(IMAGE)" bash
 
 stop:
 	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
