@@ -3,9 +3,8 @@ These scripts help to use python machine learning libraries through docker image
 Docker file provides:
 1. [anaconda](https://anaconda.org/anaconda/python)
 2. [catboost](https://github.com/catboost/catboost)
-3. [gensim](https://radimrehurek.com/gensim/)
-4. [jupiter](http://jupyter.org/)
-5. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
+3. [jupiter](http://jupyter.org/)
+4. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
 
 Usage:  
 
