@@ -1,6 +1,7 @@
 These scripts help to use python machine learning libraries through docker images.
 
 Docker file provides:
+0. python 3
 1. [anaconda](https://anaconda.org/anaconda/python)
 2. [catboost](https://github.com/catboost/catboost)
 3. [jupiter](http://jupyter.org/)
@@ -10,12 +11,12 @@ Usage:
 
 Add  repository to PATH variable.
 
-Run jupiter notebook using python 3:
+Run jupiter notebook:
 ```bash
 jupiter.sh notebook
 ```
 
-Run jupiter lab using python 3:
+Run jupiter lab:
 ```bash
 jupiter.sh
 ```
