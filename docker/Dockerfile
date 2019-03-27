@@ -9,7 +9,6 @@ RUN /opt/conda/bin/pip install --upgrade pip && \
     /opt/conda/bin/conda install catboost -y && \
     /opt/conda/bin/conda install jupyter -y && \
     /opt/conda/bin/conda install jupyterlab -y && \
-    /opt/conda/bin/conda install gensim -y && \
     /opt/conda/bin/conda install scrapy -y && \
     /opt/conda/bin/pip install plotly_express
 
