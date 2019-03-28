@@ -3,14 +3,14 @@ FROM continuumio/anaconda3
 MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
 RUN /opt/conda/bin/pip install --upgrade pip && \
-    /opt/conda/bin/conda update conda -y && \
-    # line below is needed to install catboost, jupiterlab
-    /opt/conda/bin/conda config --add channels conda-forge && \
-    /opt/conda/bin/conda install catboost -y && \
-    /opt/conda/bin/conda install jupyter -y && \
-    /opt/conda/bin/conda install jupyterlab -y && \
-    /opt/conda/bin/conda install scrapy -y && \
-    /opt/conda/bin/pip install plotly_express
+    /opt/conda/bin/conda update conda -y
+
+# line below is needed to install catboost, jupiterlab
+RUN /opt/conda/bin/conda config --add channels conda-forge
+ADD conda_requirements.txt /
+RUN /opt/conda/bin/conda install -y --file conda_requirements.txt
+ADD requirements.txt /
+RUN /opt/conda/bin/pip install -r requirements.txt
 
 ENV R_USER someuser
 ENV R_GROUP someuser
