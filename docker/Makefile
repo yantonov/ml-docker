@@ -16,6 +16,7 @@ notebook:
 			--hostname localhost \
 			-i -t \
 			-p 8888:8888 \
+			--user someuser:someuser \
 			-v "$(SRC):/opt/notebooks" \
 			--rm \
 			"$(IMAGE)" \
@@ -31,6 +32,7 @@ lab:
 			--hostname localhost \
 			-i -t \
 			-p 8888:8888 \
+			--user someuser:someuser \
 			-v "$(SRC):/opt/notebooks" \
 			--rm \
 			"$(IMAGE)" \

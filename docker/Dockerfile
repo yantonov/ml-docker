@@ -12,10 +12,20 @@ RUN /opt/conda/bin/pip install --upgrade pip && \
     /opt/conda/bin/conda install scrapy -y && \
     /opt/conda/bin/pip install plotly_express
 
-ENV CUSER someuser
+ENV R_USER someuser
+ENV R_GROUP someuser
 
-RUN useradd -m -s /bin/bash -N $CUSER && \
+RUN groupadd -r $R_GROUP && \
+    useradd -m -s /bin/bash -g $R_GROUP $R_USER && \
     mkdir -p /opt/notebooks && \
-    chown $CUSER /opt/notebooks
+    chown $R_USER /opt/notebooks
 
-USER $CUSER
+USER $R_USER
+
+ENV JUPITER_PORT 8888
+RUN jupyter notebook --generate-config
+
+# jupiter configuration
+RUN echo "c.NotebookApp.ip = '*'"               >> /home/$R_USER/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.port = ${JUPITER_PORT}" >> /home/$R_USER/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.token = ''"             >> /home/$R_USER/.jupyter/jupyter_notebook_config.py
