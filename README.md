@@ -7,6 +7,7 @@ Docker file provides:
 3. [catboost](https://github.com/catboost/catboost)
 4. [jupiter](http://jupyter.org/)
 5. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
+6. [pyplot_express](https://www.plotly.express/)
 
 Usage:  
 
