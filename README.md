@@ -26,5 +26,4 @@ jupiter.sh
 After that you can connect to notebook at localhost:8888, current working directory will be mounted also.
 
 Links:
-1. [Anaconda docker files](https://github.com/ContinuumIO/docker-images)
-2. [ml image at docker hub](https://hub.docker.com/r/yantonov/ml/)
+1. [ml image at docker hub](https://hub.docker.com/r/yantonov/ml/)
