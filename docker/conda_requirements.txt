@@ -1,4 +1,2 @@
-catboost
-jupyter
-jupyterlab
-scrapy
+conda-forge::catboost
+conda-forge::scrapy
