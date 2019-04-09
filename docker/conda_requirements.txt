@@ -1,2 +1,2 @@
-conda-forge::catboost
+conda-forge::catboost=0.13.1
 conda-forge::scrapy
