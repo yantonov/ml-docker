@@ -16,7 +16,6 @@ notebook:
 			--hostname localhost \
 			-i -t \
 			-p 8888:8888 \
-			--user someuser:someuser \
 			-v "$(SRC):/opt/notebooks" \
 			--rm \
 			"$(IMAGE)" \
@@ -25,14 +24,14 @@ notebook:
 			--notebook-dir=/opt/notebooks \
 			--ip=0.0.0.0 \
 			--port=8888 \
-			--no-browser"
+			--no-browser \
+			--allow-root"
 
 lab:
 	docker run \
 			--hostname localhost \
 			-i -t \
 			-p 8888:8888 \
-			--user someuser:someuser \
 			-v "$(SRC):/opt/notebooks" \
 			--rm \
 			"$(IMAGE)" \
@@ -41,7 +40,8 @@ lab:
 			--notebook-dir=/opt/notebooks \
 			--ip=0.0.0.0 \
 			--port=8888 \
-			--no-browser"
+			--no-browser \
+			--allow-root"
 
 ssh:
 	docker run --rm -u 0 -t -i -v "$(SRC):/opt/notebooks" "$(IMAGE)" bash
