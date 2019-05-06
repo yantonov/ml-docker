@@ -10,13 +10,6 @@ RUN conda config --add channels conda-forge
 RUN conda update -c conda-forge conda
 
 ADD files/conda_requirements.txt /
-RUN conda install -y --file conda_requirements.txt
+RUN conda install -y --file /conda_requirements.txt
 ADD files/requirements.txt /
-RUN pip install -r requirements.txt
-
-ADD files/init-jupiter.sh /home/${MY_USER}
-ADD files/init.sh /home/${MY_USER}
-
-WORKDIR /home/${MY_USER}
-
-ENTRYPOINT [ "./init.sh" ]
+RUN pip install -r /requirements.txt
