@@ -9,15 +9,14 @@ RUN conda config --add channels conda-forge
 
 RUN conda update -c conda-forge conda
 
-ADD conda_requirements.txt /
+ADD files/conda_requirements.txt /
 RUN conda install -y --file conda_requirements.txt
-ADD requirements.txt /
+ADD files/requirements.txt /
 RUN pip install -r requirements.txt
 
-ENV JUPITER_PORT 8888
-RUN jupyter notebook --generate-config
+ADD files/init-jupiter.sh /home/${MY_USER}
+ADD files/init.sh /home/${MY_USER}
 
-# jupiter configuration
-RUN echo "c.NotebookApp.ip = '*'"               >> /home/${MY_USER}/.jupyter/jupyter_notebook_config.py
-RUN echo "c.NotebookApp.port = ${JUPITER_PORT}" >> /home/${MY_USER}/.jupyter/jupyter_notebook_config.py
-RUN echo "c.NotebookApp.token = ''"             >> /home/${MY_USER}/.jupyter/jupyter_notebook_config.py
+WORKDIR /home/${MY_USER}
+
+ENTRYPOINT [ "./init.sh" ]

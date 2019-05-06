@@ -4,6 +4,7 @@ help:
 DOCKER_FILE=Dockerfile
 SRC?=$(shell pwd)
 CONTAINER_SRC=/src
+JUPITER_PORT=8888
 
 IMAGE=yantonov/ml
 
@@ -16,34 +17,35 @@ notebook:
 	docker run \
 			--hostname localhost \
 			-i -t \
-			-p 8888:8888 \
+			-p 8888:$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
-			/bin/bash -c \
-			"/opt/conda/bin/jupyter notebook \
+			"jupyter notebook \
 			--notebook-dir=$(CONTAINER_SRC) \
 			--ip=0.0.0.0 \
-			--port=8888 \
+			--port=$(JUPITER_PORT) \
 			--no-browser"
 
 lab:
 	docker run \
 			--hostname localhost \
 			-i -t \
-			-p 8888:8888 \
+			-p 8888:$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
-			/bin/bash -c \
-			"/opt/conda/bin/jupyter lab \
+			"jupyter lab \
 			--notebook-dir=$(CONTAINER_SRC) \
 			--ip=0.0.0.0 \
-			--port=8888 \
+			--port=$(JUPITER_PORT) \
 			--no-browser"
 
 ssh:
-	docker run --rm -u 0 -t -i -v "$(SRC):$(CONTAINER_SRC)" "$(IMAGE)" bash
+	docker run --rm -t -i -v "$(SRC):$(CONTAINER_SRC)" "$(IMAGE)" /bin/bash
+
+root:
+	docker run --rm -u 0 -t -i -v "$(SRC):$(CONTAINER_SRC)" "$(IMAGE)" /bin/bash
 
 stop:
 	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
