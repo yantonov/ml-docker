@@ -8,7 +8,9 @@ Docker file provides:
 4. [jupiter](http://jupyter.org/)
 5. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
 6. [pyplot_express](https://www.plotly.express/)
-6. [spacy](https://spacy.io)
+7. [scrapy](https://scrapy.org/)
+8. [spacy](https://spacy.io)
+9. [yellowbrick](http://www.scikit-yb.org/)
 
 Usage:  
 
