@@ -11,6 +11,7 @@ Docker file provides:
 7. [scrapy](https://scrapy.org/)
 8. [spacy](https://spacy.io)
 9. [yellowbrick](http://www.scikit-yb.org/)
+10. [pandas-profiling](https://github.com/pandas-profiling/pandas-profiling)
 
 Usage:  
 
