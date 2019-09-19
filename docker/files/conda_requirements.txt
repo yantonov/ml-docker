@@ -1,4 +1,4 @@
-conda-forge::catboost=0.16.2
+conda-forge::catboost
 conda-forge::pandas-profiling
 conda-forge::scrapy
 conda-forge::spacy
