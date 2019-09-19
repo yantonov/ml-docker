@@ -1,2 +1,3 @@
+clickhouse-driver
 plotly_express
 yellowbrick
