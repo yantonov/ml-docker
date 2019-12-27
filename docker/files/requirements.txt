@@ -1,4 +1,4 @@
-clickhouse-driver
-jupyter_contrib_nbextensions
-plotly_express
-yellowbrick
+clickhouse-driver==0.1.2
+jupyter_contrib_nbextensions==0.5.1
+plotly_express==0.4.1
+yellowbrick==1.0.1
