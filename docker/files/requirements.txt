@@ -1,3 +1,4 @@
 clickhouse-driver
+jupyter_contrib_nbextensions
 plotly_express
 yellowbrick
