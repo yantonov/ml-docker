@@ -6,7 +6,8 @@ Docker file provides:
 2. [anaconda](https://anaconda.org/anaconda/python)
 3. [jupiter](http://jupyter.org/)
 4. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
-Some additional libraries
+
+Some additional libraries:  
 [Conda packages](https://github.com/yantonov/ml-docker/blob/master/docker/files/conda_requirements.txt)  
 [Pip packages](https://github.com/yantonov/ml-docker/blob/master/docker/files/requirements.txt)  
 
@@ -27,4 +28,4 @@ jupiter.sh
 After that you can connect to notebook at localhost:8888, current working directory will be mounted also.
 
 Links:
-1. [ml image at docker hub](https://hub.docker.com/r/yantonov/ml/)
+1. [Docker hub](https://hub.docker.com/r/yantonov/ml/)
