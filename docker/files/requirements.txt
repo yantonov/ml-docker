@@ -3,4 +3,5 @@ fastscript==0.1.4
 fastcore==0.1.1
 jupyter_contrib_nbextensions==0.5.1
 plotly_express==0.4.1
+supervenn==0.1.15
 yellowbrick==1.0.1
