@@ -7,6 +7,7 @@ CONTAINER_SRC=/src
 JUPITER_PORT=8888
 
 IMAGE=yantonov/ml
+CONTAINER_NAME=$(shell echo "$(IMAGE)" | tr '/' '_')
 
 build:
 	docker build \
@@ -16,9 +17,10 @@ build:
 notebook:
 	docker run \
 			--hostname localhost \
-			-i -t \
+			-d -it \
 			-p 8888:$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
+			--name "$(CONTAINER_NAME)" \
 			--rm \
 			"$(IMAGE)" \
 			"jupyter notebook \
@@ -31,9 +33,10 @@ notebook:
 lab:
 	docker run \
 			--hostname localhost \
-			-i -t \
+			-d \
 			-p 8888:$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
+			--name "$(CONTAINER_NAME)" \
 			--rm \
 			"$(IMAGE)" \
 			"jupyter lab \
@@ -43,11 +46,8 @@ lab:
 			--no-browser \
 			--allow-root"
 
-ssh:
-	docker run --rm -t -i -v "$(SRC):$(CONTAINER_SRC)" "$(IMAGE)" /bin/bash
-
-root:
-	docker run --rm -u 0 -t -i -v "$(SRC):$(CONTAINER_SRC)" "$(IMAGE)" /bin/bash
+logs:
+	docker logs "$(CONTAINER_NAME)"
 
 stop:
 	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
