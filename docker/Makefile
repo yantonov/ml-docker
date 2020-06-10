@@ -4,10 +4,12 @@ help:
 DOCKER_FILE=Dockerfile
 SRC?=$(shell pwd)
 CONTAINER_SRC=/src
+
 JUPITER_PORT=8888
+EXPOSED_JUPITER_PORT?=8888
 
 IMAGE=yantonov/ml
-CONTAINER_NAME=$(shell echo "$(IMAGE)" | tr '/' '_')
+CONTAINER_NAME?=$(shell echo "$(IMAGE)" | tr '/' '_')
 
 build:
 	docker build \
@@ -18,7 +20,7 @@ notebook:
 	docker run \
 			--hostname localhost \
 			-d \
-			-p 8888:$(JUPITER_PORT) \
+			-p $(EXPOSED_JUPITER_PORT):$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--name "$(CONTAINER_NAME)" \
 			--rm \
@@ -34,7 +36,7 @@ lab:
 	docker run \
 			--hostname localhost \
 			-d \
-			-p 8888:$(JUPITER_PORT) \
+			-p $(EXPOSED_JUPITER_PORT):$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--name "$(CONTAINER_NAME)" \
 			--rm \
@@ -50,7 +52,7 @@ logs:
 	docker logs "$(CONTAINER_NAME)"
 
 stop:
-	docker stop "$(shell docker ps -a --filter "ancestor=$(IMAGE)" --format '{{.ID}}' | head -n 1 || echo "")"
+	docker stop "$(CONTAINER_NAME)"
 
 pull:
 	docker pull "$(IMAGE)"
