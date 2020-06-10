@@ -17,7 +17,7 @@ build:
 notebook:
 	docker run \
 			--hostname localhost \
-			-d -it \
+			-d \
 			-p 8888:$(JUPITER_PORT) \
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--name "$(CONTAINER_NAME)" \
