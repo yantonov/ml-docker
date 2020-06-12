@@ -8,7 +8,6 @@ Docker file provides:
 4. [jupiterlab](https://jupyterlab.readthedocs.io/en/stable/)
 
 Some additional libraries:  
-[Conda packages](https://github.com/yantonov/ml-docker/blob/master/docker/files/conda_requirements.txt)  
 [Pip packages](https://github.com/yantonov/ml-docker/blob/master/docker/files/requirements.txt)  
 
 Usage:  

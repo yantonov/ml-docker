@@ -1,5 +1,0 @@
-conda-forge::catboost=0.20.2
-conda-forge::eli5=0.10.1
-conda-forge::pandas-profiling=2.3.0
-conda-forge::scrapy=1.8.0
-conda-forge::spacy=2.2.3
