@@ -1,4 +1,4 @@
-catboost==0.23.2
+catboost==0.24
 clickhouse-driver==0.1.3
 eli5==0.10.1
 fastscript==0.1.4
