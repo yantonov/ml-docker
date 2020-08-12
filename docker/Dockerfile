@@ -1,14 +1,12 @@
-FROM yantonov/anaconda3:2020.02
+FROM yantonov/anaconda3:2020.07
 
 MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
 RUN conda config --add channels conda-forge
 
 RUN apt-get update && \
-    apt-get install -y \
     # required for twisted (gcc is required)
-    build-essential \
-    && \
+    apt-get install -y build-essential && \
     apt-get clean
 
 ADD files/* /
