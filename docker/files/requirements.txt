@@ -4,6 +4,7 @@ eli5==0.10.1
 fastscript==0.1.4
 fastcore==0.1.18
 jupyter_contrib_nbextensions==0.5.1
+MulticoreTSNE==0.1
 pandas-profiling==2.8.0
 plotly_express==0.4.1
 scikit-uplift==0.2.0
