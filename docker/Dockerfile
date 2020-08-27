@@ -5,9 +5,9 @@ MAINTAINER Yury Antonov <yantonov@yandex.ru>
 RUN conda config --add channels conda-forge
 
 RUN apt-get update && \
-    # required for twisted (gcc is required)
+    # build-essential (gcc in particular) is required for twisted
+    # cmake is required for multicoreTSNE
     apt-get install -y build-essential cmake && \
-    # cmake is a prerequisite for multicoreTSNE
     apt-get clean
 
 ADD files/* /
