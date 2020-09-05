@@ -12,16 +12,18 @@ Some additional libraries:
 
 Usage:  
 
-Add  repository to PATH variable.
+Add repository to PATH variable (or link to run.sh into PATH).
 
 Run jupiter notebook:
 ```bash
-jupiter.sh notebook
+    run.sh notebook
 ```
 
 Run jupiter lab:
 ```bash
-jupiter.sh
+    run.sh lab
+    # or
+    run.sh
 ```
 
 After that you can connect to notebook at localhost:8888, current working directory will be mounted also.
