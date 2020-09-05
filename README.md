@@ -1,5 +1,8 @@
 These scripts help to use python machine learning libraries through docker images.
 
+This is just a playground.   
+For the specific task you may choose specific set of packages and create smaller image.
+
 Docker file provides:
 
 1. python 3
@@ -12,7 +15,7 @@ Some additional libraries:
 
 Usage:  
 
-Add repository to PATH variable (or link to run.sh into PATH).
+Add repository to PATH variable (or create alias/shortcut for run.sh script).
 
 Run jupiter notebook:
 ```bash
@@ -30,3 +33,4 @@ After that you can connect to notebook at localhost:8888, current working direct
 
 Links:
 1. [Docker hub](https://hub.docker.com/r/yantonov/ml/)
+2. [Repository](https://github.com/yantonov/anaconda-docker) of the base image.
