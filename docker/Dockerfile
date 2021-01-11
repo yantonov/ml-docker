@@ -1,4 +1,4 @@
-FROM yantonov/anaconda3:2020.07
+FROM yantonov/anaconda3:2020.11
 
 MAINTAINER Yury Antonov <yantonov@yandex.ru>
 
