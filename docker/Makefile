@@ -73,5 +73,8 @@ stop:
 pull:
 	docker pull "$(IMAGE)"
 
+push:
+	docker push "$(IMAGE)"
+
 uninstall:
 	docker image rm "$(IMAGE)"
