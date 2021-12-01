@@ -1,7 +1,7 @@
 These scripts help to use python machine learning libraries through docker images.
 
 This is just a playground.   
-For the specific task you may choose specific set of packages and create smaller image.
+For the specific task, you may choose a specific set of packages and create a smaller image.
 
 Docker file provides:
 
