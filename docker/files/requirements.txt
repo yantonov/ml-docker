@@ -7,9 +7,9 @@ jupyter_contrib_nbextensions==0.5.1
 MulticoreTSNE==0.1
 pandas-profiling==3.2.0
 plotly_express==0.4.1
-scikit-uplift==0.4.0
+scikit-uplift==0.4.1
 scrapy==2.6.1
-streamlit==1.7.0
+streamlit==1.10.0
 supervenn==0.4.1
 yellowbrick==1.4
 spacy==3.3.1
