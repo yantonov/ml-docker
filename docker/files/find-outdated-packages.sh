@@ -2,4 +2,4 @@
 
 pip install piprot
 
-piprot /requirements.txt
+piprot /requirements.txt | grep -v 'up to date'
