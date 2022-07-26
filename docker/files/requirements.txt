@@ -8,7 +8,7 @@ MulticoreTSNE==0.1
 pandas-profiling==3.2.0
 plotly_express==0.4.1
 scikit-uplift==0.4.1
-scrapy==2.6.1
+scrapy==2.6.2
 streamlit==1.10.0
 supervenn==0.4.1
 yellowbrick==1.4
