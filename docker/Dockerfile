@@ -1,6 +1,6 @@
-FROM yantonov/anaconda3:2022.05
+FROM yantonov/anaconda3:2022.10
 
-MAINTAINER Yury Antonov <yantonov@yandex.ru>
+MAINTAINER Yury Antonov <yantonov@fastmail.com>
 
 RUN conda config --add channels conda-forge
 
