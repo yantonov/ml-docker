@@ -4,13 +4,13 @@ echo 'List of packages to update:'
 
 
 echo "Check pip list"
-pip list -o --format=freeze | grep '==' | awk -F== '{ print $1 }' | sort > tmp_pip_list
+python3 -m pip list --outdated --format=json | jq -r '.[] | "\(.name)"' | sort  > tmp_pip_list
 
 echo "Check requirements.txt"
-awk -F== '{ print $1 }' requirements.txt | sort > tmp_req_list
+cat requirements.txt | grep -v '#' | awk -F== '{ print $1 }' | sort > tmp_req_list
 
 echo '---'
-join tmp_pip_list tmp_req_list
+join tmp_pip_list tmp_req_list | tee 2update.txt
 echo '---'
 
 rm tmp_pip_list
