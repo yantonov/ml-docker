@@ -1,0 +1,9 @@
+# jupiter notebook tmp dir
+.ipynb_checkpoints/
+
+# jupiter lab tmp dir
+.virtual_documents/
+
+# python notebooks
+*.ipynb
+
