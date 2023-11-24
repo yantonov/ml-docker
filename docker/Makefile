@@ -10,17 +10,18 @@ EXPOSED_JUPITER_PORT?=8888
 STREAMLIT_PORT=8501
 EXPOSED_STREAMLIT_PORT?=8501
 
-
 IMAGE=yantonov/ml
 CONTAINER_NAME?=$(shell echo "$(IMAGE)" | tr '/' '_')
 
+EXECUTABLE=$(shell command -v docker && echo "docker" || echo "podman")
+
 build:
-	docker build \
+	$(EXECUTABLE) build \
 		-t $(IMAGE) \
 		-f $(DOCKER_FILE) .
 
 notebook:
-	docker run \
+	$(EXECUTABLE) run \
 			--hostname localhost \
 			-it \
 			-p $(EXPOSED_JUPITER_PORT):$(JUPITER_PORT) \
@@ -37,7 +38,7 @@ notebook:
 			--allow-root"
 
 lab:
-	docker run \
+	$(EXECUTABLE) run \
 			--hostname localhost \
 			-it \
 			-p $(EXPOSED_JUPITER_PORT):$(JUPITER_PORT) \
@@ -54,10 +55,10 @@ lab:
 			--allow-root"
 
 logs:
-	docker logs "$(CONTAINER_NAME)"
+	$(EXECUTABLE) logs "$(CONTAINER_NAME)"
 
 ssh:
-	docker run --hostname localhost \
+	$(EXECUTABLE) run --hostname localhost \
 			-it \
 			-p $(EXPOSED_JUPITER_PORT):$(JUPITER_PORT) \
 			-p $(EXPOSED_STREAMLIT_PORT):$(STREAMLIT_PORT) \
@@ -68,13 +69,13 @@ ssh:
 			/bin/bash
 
 stop:
-	docker stop "$(CONTAINER_NAME)"
+	$(EXECUTABLE) stop "$(CONTAINER_NAME)"
 
 pull:
-	docker pull "$(IMAGE)"
+	$(EXECUTABLE) pull "$(IMAGE)"
 
 push:
-	docker push "$(IMAGE)"
+	$(EXECUTABLE) push "$(IMAGE)"
 
 uninstall:
-	docker image rm "$(IMAGE)"
+	$(EXECUTABLE) image rm "$(IMAGE)"
