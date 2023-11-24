@@ -13,7 +13,7 @@ EXPOSED_STREAMLIT_PORT?=8501
 IMAGE=yantonov/ml
 CONTAINER_NAME?=$(shell echo "$(IMAGE)" | tr '/' '_')
 
-EXECUTABLE=$(shell command -v docker && echo "docker" || echo "podman")
+EXECUTABLE=$(shell command -v docker >> /dev/null 2>&1 && echo "docker" || echo "podman")
 
 build:
 	$(EXECUTABLE) build \
