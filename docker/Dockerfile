@@ -12,5 +12,3 @@ RUN apt-get update && \
 
 ADD files/* /
 RUN pip install -r /requirements.txt
-
-RUN jupyter contrib nbextension install
