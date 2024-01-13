@@ -16,7 +16,7 @@ ydata-profiling==4.6.1
 plotly_express==0.4.1
 scikit-uplift==0.5.1
 scrapy==2.7.1
-streamlit==1.28.2
+streamlit==1.30.0
 supervenn==0.4.2
 yellowbrick==1.5
 spacy==3.7.2
