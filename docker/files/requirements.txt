@@ -1,8 +1,7 @@
-catboost==1.2.2
-clickhouse-driver==0.2.6
+catboost==1.2.5
+clickhouse-driver==0.2.8
 eli5==0.13.0
-fastscript==1.0.0
-fastcore==1.5.29
+fastcore==1.5.51
 
 # jupiter notebook extentions
 jupyter_contrib_nbextensions==0.5.1
@@ -10,13 +9,13 @@ jupyter-black==0.3.4
 
 # jupiter lab extentions
 jupyterlab-code-formatter==2.2.1
-black==24.3.0
+black==24.4.2
 
-ydata-profiling==4.6.1
+ydata-profiling==4.8.3
 plotly_express==0.4.1
 scikit-uplift==0.5.1
 scrapy==2.11.2
-streamlit==1.30.0
-supervenn==0.4.2
+streamlit==1.36.0
+supervenn==0.5.0
 yellowbrick==1.5
-spacy==3.7.2
+spacy==3.7.5
