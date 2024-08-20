@@ -14,7 +14,7 @@ black==24.8.0
 ydata-profiling==4.9.0
 plotly_express==0.4.1
 scikit-uplift==0.5.1
-scrapy==2.7.1
+scrapy==2.11.2
 streamlit==1.37.1
 supervenn==0.5.0
 yellowbrick==1.5
